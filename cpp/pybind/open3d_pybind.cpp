@@ -27,15 +27,8 @@
 #include "pybind/open3d_pybind.h"
 
 #include "open3d/utility/Console.h"
-#include "pybind/camera/camera.h"
 #include "pybind/core/core.h"
-#include "pybind/geometry/geometry.h"
-#include "pybind/io/io.h"
-#include "pybind/ml/ml.h"
-#include "pybind/pipelines/pipelines.h"
-#include "pybind/t/t.h"
 #include "pybind/utility/utility.h"
-#include "pybind/visualization/visualization.h"
 
 namespace open3d {
 
@@ -57,14 +50,7 @@ PYBIND11_MODULE(pybind, m) {
     // into a Python object" error.
     utility::pybind_utility(m);
 
-    camera::pybind_camera(m);
     core::pybind_core(m);
-    geometry::pybind_geometry(m);
-    t::pybind_t(m);
-    ml::pybind_ml(m);
-    io::pybind_io(m);
-    pipelines::pybind_pipelines(m);
-    visualization::pybind_visualization(m);
 }
 
 }  // namespace open3d
